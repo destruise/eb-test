@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		var server = window.location.origin;
+		var socket = io.connect(server);
+
+		var send = function() {
+			var text = $('#inputMessage').val();
+			console.log('sending', text, server);
+			socket.emit('chat', {message: text});
+			$('#inputMessage').val('');
+		}
+
+		socket.on('chat', function(data) {
+			$('#output').prepend('<p>[server reply] '+data.message+'</p>');
+		});
+
+	</script>
+</head>
+<body>
+	<div id="input">
+		<input type="text" id="inputMessage" />
+		<button onclick="send()">send</button>
+	</div>
+	<div id="output"></div>
+</body>
+</html>

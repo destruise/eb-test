@@ -1,0 +1,24 @@
+{
+  "name": "eb-node",
+  "version": "0.0.0",
+  "description": "just testing node on eb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "eb-test"
+  },
+  "keywords": [
+    "node",
+    "socket.io",
+    "eb",
+    "aws"
+  ],
+  "author": "grudelsud",
+  "license": "MIT",
+  "devDependencies": {
+    "socket.io": "~0.9.16"
+  }
+}
