@@ -1,6 +1,6 @@
 # eb test
 
-this is just a simple socket-based echo server, running on amazon elastic beanstalk in nodejs with socket.io
+this is just a VERY simple socket-based echo server, running on amazon elastic beanstalk in nodejs with socket.io
 
 to run this test:
 
